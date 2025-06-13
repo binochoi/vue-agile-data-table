@@ -1,0 +1,35 @@
+{
+  "name": "vue-agile-data-table",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "dev": "vite",
+    "build": "rimraf dist && tsc && vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.8"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "^12.7.0",
+    "ag-grid-community": "^33.3.0",
+    "ag-grid-vue3": "^33.3.0",
+    "typescript": "^5.0.0",
+    "vue": "^3.5.0"
+  }
+}
